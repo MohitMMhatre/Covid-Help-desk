@@ -1,0 +1,132 @@
+﻿@model Covid19Helpdesk.Models.Summary
+
+@{
+    ViewBag.Title = "Corona H";
+}
+
+<h2>Corona Help Desk</h2>
+
+
+<div class="form-horizontal">
+
+    <hr />
+    <div class="form-group">
+        <table class="table table-responsive" style="width:400px">
+            <tr>
+                <th>
+                    New Confirmed
+                </th>
+                <th>
+                    Total Confirmed
+                </th>
+                <th>
+                    New Deaths
+                </th>
+                <th>
+                    Total Deaths
+                </th>
+                <th>
+                    New Recovered
+                </th>
+                <th>
+                    Total Recovered
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.Global.NewConfirmed)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Global.TotalConfirmed)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Global.NewDeaths)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Global.TotalDeaths)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Global.NewRecovered)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Global.TotalRecovered)
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <hr />
+    <div class="form-group">
+        <table class="table table-responsive" >
+            <tr>
+                <th>
+                    Country
+                </th>
+                <th>
+                    Country Code
+                </th>
+                <th>
+                    Slug
+                </th>
+                <th>
+                    New Confirmed
+                </th>
+                <th>
+                    Total Confirmed
+                </th>
+                <th>
+                    New Deaths
+                </th>
+                <th>
+                    Total Deaths
+                </th>
+                <th>
+                    New Recovered
+                </th>
+                <th>
+                    Total Recovered
+                </th>
+                <th>
+                    Date
+                </th>
+            </tr>
+            @foreach (var item in Model.Countries)
+            {
+                int asd = 1;
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Country)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CountryCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Slug)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NewConfirmed)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalConfirmed)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NewDeaths)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalDeaths)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NewRecovered)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalRecovered)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+
+</div> 
