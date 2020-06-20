@@ -18,7 +18,7 @@ namespace Covid19Helpdesk.Controllers
         public async Task<ActionResult> GetSummary()
         {
             Summary summary = new Summary();
-           using(var client= new HttpClient())
+            using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(APIS.Summary);
                 client.DefaultRequestHeaders.Clear();
@@ -31,10 +31,6 @@ namespace Covid19Helpdesk.Controllers
                 }
             }
             return View(summary);
-        }
-        public  ActionResult asd()
-        {
-            return View();
         }
     }
 }

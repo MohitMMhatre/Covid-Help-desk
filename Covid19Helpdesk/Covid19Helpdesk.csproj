@@ -182,7 +182,6 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\CovidHelp\GetSummary.cshtml" />
-    <Content Include="Views\CovidHelp\asd.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
